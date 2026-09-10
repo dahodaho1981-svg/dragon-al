@@ -1,0 +1,281 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dragon AI Video</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="logo">
+                <div class="logo-icon">✦</div>
+
+                <div>
+                    <h1>Dragon AI</h1>
+                    <span>AI Video Studio</span>
+                </div>
+            </div>
+
+            <button class="settings-btn" id="settingsBtn">
+                ⚙
+            </button>
+
+        </header>
+
+
+        <!-- Welcome -->
+        <section class="welcome">
+
+            <h2>اصنع فيديوك بالذكاء الاصطناعي ✨</h2>
+
+            <p>
+                ارفع صورة، اكتب وصفك، ودع الذكاء الاصطناعي يحول فكرتك إلى فيديو.
+            </p>
+
+        </section>
+
+
+        <!-- Image Card -->
+        <section class="card">
+
+            <div class="card-title">
+
+                <div>
+                    <span class="number">1</span>
+                    <span>الصورة</span>
+                </div>
+
+                <span class="required">مطلوب</span>
+
+            </div>
+
+
+            <label for="imageInput" class="upload-box" id="uploadBox">
+
+                <div class="upload-icon">↑</div>
+
+                <strong>اختر صورة</strong>
+
+                <small>
+                    JPG أو PNG — اضغط لاختيار صورة
+                </small>
+
+            </label>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/png,image/jpeg,image/webp"
+                hidden
+            >
+
+
+            <div
+                id="imagePreview"
+                class="image-preview"
+            >
+            </div>
+
+        </section>
+
+
+        <!-- Prompt Card -->
+        <section class="card">
+
+            <div class="card-title">
+
+                <div>
+                    <span class="number">2</span>
+                    <span>وصف الفيديو</span>
+                </div>
+
+                <span class="required">مطلوب</span>
+
+            </div>
+
+
+            <textarea
+                id="prompt"
+                maxlength="1000"
+                placeholder="مثال: قطة تتحدث وتقول ماما، تتحرك بشكل طبيعي، حركة كاميرا سينمائية، إضاءة واقعية..."
+            ></textarea>
+
+
+            <div class="prompt-footer">
+
+                <span>
+                    اكتب بالتفصيل ما تريد أن يحدث في الفيديو
+                </span>
+
+                <span id="counter">
+                    0 / 1000
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Settings Card -->
+        <section class="card">
+
+            <div class="card-title">
+
+                <div>
+                    <span class="number">3</span>
+                    <span>إعدادات الفيديو</span>
+                </div>
+
+            </div>
+
+
+            <div class="settings-grid">
+
+                <div class="setting">
+
+                    <label>المدة</label>
+
+                    <select id="duration">
+
+                        <option value="5">
+                            5 ثواني
+                        </option>
+
+                        <option value="10" selected>
+                            10 ثواني
+                        </option>
+
+                        <option value="15">
+                            15 ثانية
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="setting">
+
+                    <label>النسبة</label>
+
+                    <select id="aspectRatio">
+
+                        <option value="9:16" selected>
+                            9:16 — عمودي
+                        </option>
+
+                        <option value="16:9">
+                            16:9 — أفقي
+                        </option>
+
+                        <option value="1:1">
+                            1:1 — مربع
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Generate -->
+        <button
+            id="generateBtn"
+            class="generate-btn"
+        >
+
+            <span>✦</span>
+
+            <span>إنشاء الفيديو</span>
+
+            <span class="arrow">→</span>
+
+        </button>
+
+
+        <!-- Status -->
+        <div
+            id="status"
+            class="status"
+        ></div>
+
+
+        <!-- Result -->
+        <section
+            id="videoContainer"
+            class="result-card"
+        >
+
+            <div class="result-title">
+
+                <span>🎬 الفيديو الناتج</span>
+
+            </div>
+
+
+            <video
+                id="resultVideo"
+                controls
+                playsinline
+            ></video>
+
+
+            <a
+                id="downloadBtn"
+                class="download-btn"
+                download="dragon-ai-video.mp4"
+            >
+                ↓ حفظ الفيديو
+            </a>
+
+        </section>
+
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+
+            <button class="nav-item active">
+                <span>⌂</span>
+                <small>الرئيسية</small>
+            </button>
+
+            <button class="nav-item">
+                <span>✦</span>
+                <small>إنشاء</small>
+            </button>
+
+            <button class="nav-item">
+                <span>▣</span>
+                <small>المعرض</small>
+            </button>
+
+            <button class="nav-item">
+                <span>⚙</span>
+                <small>الإعدادات</small>
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
